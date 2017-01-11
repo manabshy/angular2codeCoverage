@@ -31,15 +31,19 @@ Run `ng github-pages:deploy` to deploy to Github Pages.
 To get more help on the `angular-cli` use `ng help` or go check out the [Angular-CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
 
 
-## Generate a Test Coverage Report - Run the steps sequentially
+## Generate a Test Coverage Report (Run the steps sequentially)
 
-# Run all the tests and if all tests passes then generate a coverage directory at the project root containing a single file,coverage-final.json. Check that file and make sure it is Not Empty.
+# Run all the tests and if all tests passes then a "coverage" directory is created at the project root containing a single file called coverage-final.json. 
+# Check this file and make sure it is Not Empty.
+
 ng test --code-coverage
 
-# posttest uses remap-istanbul to map the transpiles javascript code to the original TypeScript. 
+# posttest uses remap-istanbul to map the transpiled javascript code to the original TypeScript. 
+
 npm posttest
 
 # spin up a server to display the report on the browser
+
 npm run coverage
 
 

@@ -1,5 +1,4 @@
 // Karma configuration file, see link for more information
-// https://karma-runner.github.io/0.13/config/configuration-file.html
 
 module.exports = function (config) {
   config.set({
@@ -20,16 +19,18 @@ module.exports = function (config) {
             {pattern: 'node_modules/angular2/bundles/testing.dev.js', included: true, watched: true},
             {pattern: 'node_modules/angular2/bundles/http.dev.js', included: true, watched: true},
 
- 	    // paths loaded via module imports
+ 	         //Paths loaded via module imports
             {pattern: 'dist/**/*', included: false, watched: true},
-   
-	    { pattern: './src/test.ts', watched: false },
+            { pattern: './src/test.ts', watched: false },
             { pattern: 'karma-test-shim.js', included: true, watched: true},
 
-           // Distribution folder
+            //Distribution folder
             { pattern: 'src/**/*.ts', included: false, watched: false },
             { pattern: 'dist/**/*.js.map', included: false, watched: false } 
     ],
+    
+    //Source files that you need to generate the coverage report 
+    //regular expression to get to which files we should create the coverage report. Basically all the TypeScript files that doesn’t have a spec inside.
     preprocessors: {
       './src/test.ts': ['angular-cli'],
        'src/app/**/!(*.spec).js': ['coverage'] 
@@ -39,7 +40,6 @@ module.exports = function (config) {
     mime: {
       'text/x-typescript': ['ts','tsx']
     },
-
     remapIstanbulReporter: {
       reports: {
         html: 'coverage',
