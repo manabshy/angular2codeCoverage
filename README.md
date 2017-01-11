@@ -33,15 +33,15 @@ To get more help on the `angular-cli` use `ng help` or go check out the [Angular
 
 ## Generate a Test Coverage Report (Run the steps sequentially)
 
-1. Run all the tests using and if all tests passes then a "coverage" directory is created at the project root containing a single file called coverage-final.json. Check this file and make sure it is Not Empty.
+ Run all the tests using the below command and if all tests passes then a "coverage" directory is created at the project root containing a single file called coverage-final.json. Check this file and make sure it is Not Empty.
 
 ng test --code-coverage
 
-2. posttest uses remap-istanbul to map the transpiled javascript code to the original TypeScript.
+ Below posttest command uses remap-istanbul to map the transpiled javascript code to the original TypeScript.
 
 npm posttest
 
-3. spin up a server to display the report on the browser
+ Spin up a server to display the report on the browser
 
 npm run coverage
 
